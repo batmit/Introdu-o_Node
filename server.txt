@@ -1,0 +1,25 @@
+//USANDO NODE JS NATIVO, O QUE NÃO É MUITO UTILIZADO
+
+
+import {createServer} from 'node:http'
+
+
+// request é o que requisitamos/pegamos da solicitação, response é o que respondemos
+const server = createServer((request, response) => {
+    // é executado a função que está aqui quando o localhost:3333 é chamado
+
+    response.write("Legal")
+
+
+
+    //para finalizar a aplicação, return é o final de toda função
+    return response.end() 
+})
+
+// localhost
+server.listen(3333)
+
+
+//executa o npm init -y para criar o package.json
+//dentro do package.json coloca "type": "module",
+//executa npm install fastify, para instalar biblioteca, é um biblioteca com funções comuns em todas aplicações
